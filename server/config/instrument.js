@@ -1,15 +1,14 @@
 // Import with `import * as Sentry from "@sentry/node"` if you are using ESM
 import * as Sentry from "@sentry/node"
 import { nodeProfilingIntegration } from "@sentry/profiling-node";
-
 Sentry.init({
-  dsn: "",
+  dsn: "https://8e387daca1bc9939a4e692b37a497304@o4508835447898112.ingest.us.sentry.io/4508846968406016",
   integrations: [
     nodeProfilingIntegration(),
     Sentry.mongooseIntegration()
   ],
   // Tracing
-  tracesSampleRate: 1.0, //  Capture 100% of the transactions
+  // tracesSampleRate: 1.0, //  Capture 100% of the transactions
 });
 // Manually call startProfiler and stopProfiler
 // to profile the code in between

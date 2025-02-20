@@ -51,7 +51,7 @@ export const AppContextProvider = (props) => {
         try {
 
             const { data } = await axios.get(backendUrl + '/api/company/company', { headers: { token: companyToken } })
-
+            
             if (data.success) {
                 setCompanyData(data.company)
             } else {
@@ -68,10 +68,8 @@ export const AppContextProvider = (props) => {
         try {
 
             const token = await getToken();
-
             const { data } = await axios.get(backendUrl + '/api/users/user',
                 { headers: { Authorization: `Bearer ${token}` } })
-
             if (data.success) {
                 setUserData(data.user)
             } else (

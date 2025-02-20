@@ -7,7 +7,6 @@ import { v2 as cloudinary } from "cloudinary"
 export const getUserData = async (req, res) => {
 
     const userId = req.auth.userId
-
     try {
 
         const user = await User.findById(userId)
